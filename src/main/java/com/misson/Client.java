@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 /**
@@ -32,12 +31,12 @@ public class Client {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Actions action = new Actions(driver);
         Thread.sleep(500);
-        WebElement login_input = driver.findElement(By.id("email"));
-        WebElement pwd_input = driver.findElement(By.id("pwd"));
-        WebElement code_input = driver.findElement(By.id("code"));
-        WebElement img = driver.findElement(By.id("imgCode"));
-        WebElement button = driver.findElement(By.id("denglu"));
         do {
+            WebElement login_input = driver.findElement(By.id("email"));
+            WebElement pwd_input = driver.findElement(By.id("pwd"));
+            WebElement code_input = driver.findElement(By.id("code"));
+            WebElement img = driver.findElement(By.id("imgCode"));
+            WebElement button = driver.findElement(By.id("denglu"));
             login_input.clear();
             pwd_input.clear();
             code_input.clear();
